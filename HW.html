@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HW</title>
+</head>
+<body>
+    <p>Click the button to evaluate</p>
+
+    <button onclick="myFunction()">Evaluate</button>
+
+    <p id="Rivals"></p>
+<p>Click the button to sort the array in ascending order.</p>
+
+    <button onclick="ascending()">Ascending order</button>
+        <button onclick="descending()">Descending order</button>
+
+        <p id="ITS RAINING TACOS!"></p>
+    <script>
+
+
+var numbers = [65, 44, 12, 4];
+
+function myFunction(num) {
+
+    return num * 10;
+
+}
+
+var newArray = numbers.map(myFunction);
+
+document.getElementById("Rivals").innerHTML = newArray;
+
+
+
+            var points = [40, 100, 1, 5, 25, 10];
+
+            document.getElementById("ITS RAINING TACOS!").innerHTML = points;
+
+            function ascending() {
+
+                points.sort(function(a, b){return a - b});
+                document.getElementById("ITS RAINING TACOS!").innerHTML = points;
+            }
+
+            function descending() {
+
+                points.sort(function(a, b){return b - a});
+                document.getElementById("ITS RAINING TACOS!").innerHTML = points;
+            }
+
+
+function myFunction() {
+
+    var x = 67;
+    var y = 41;
+
+    var a = eval("x * y");
+    
+    var b = eval("x / y");
+    
+    var c = eval("x + y");
+    
+    var d = eval("x - y");
+
+    var res = a + b + c + d// concatenates the string;
+
+    document.getElementById("Rivals").innerHTML = res;
+
+}
+    </script>
+</body>
+</html>
